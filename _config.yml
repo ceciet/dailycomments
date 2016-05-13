@@ -3,7 +3,7 @@ title: 每天多一点
 email: dq0572255@126.com
 description: 
 
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/dailycomments/" # the subpath of your site, e.g. /blog/
 url: "http://gitcommit.dailycomments"
 # twitter_username: jekyllrb
 github_username:  ceciet
