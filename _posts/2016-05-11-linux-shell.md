@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "linux shell"
-date:   2016-05-11 20:38:18 +0800
+title:  "shell的之前没注意的"
+date:   2016-05-11 14:40:18 +0800
 ---
 
-shell Bash测试
+### shell Bash测试
 :test expr and [expr]
 -eq、 -ne、-lt、 -le、 -gt 或 -ge 比较算术值，它们分别表示等于、不等于、小于、小于等于、大于、大于等于。
 分别用操作符 =、 !=、< 和 > 比较字符串是否相等、不相等或者第一个字符串的排序在第二个字符串的前面或后面。单目操作符 -z 测试 null 字符串，如果字符串非空 -n 返回 True（或者根本没有操作符）
@@ -15,10 +15,11 @@ shell Bash测试
 详情参考：http://www.ibm.com/developerworks/cn/linux/l-bash-test.html
 
 
-参数：
+### 参数：
 详情：http://www.ibm.com/developerworks/cn/linux/l-bash-parameters.html
-getopts命令
-while getopts ":v:p:" optval "$@"
+#### getopts命令
+
+`while getopts ":v:p:" optval "$@"
   do
     case $optval in
       "v")
@@ -39,7 +40,7 @@ while getopts ":v:p:" optval "$@"
         errormsg="Unknown parameter or option error with option - $OPTARG"
         ;;
     esac
-  done
+  done`
 
 
 
