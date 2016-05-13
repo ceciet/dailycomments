@@ -22,27 +22,27 @@ test expr and [expr]
 ### getopts命令
 
 `｀｀
-while getopts ":v:p:" optval "$@"  
-  do  
-    case $optval in  
-      "v")  
-        ssversion="$OPTARG"
-        ;;
-      "p")
-          # Convert any backslashes to forward slashes
-          pathsuffix="${OPTARG//\\//}"
-          # Ensure this is a leading / and no trailing one
-          [ ${pathsuffix:0:1} != "/" ] && pathsuffix="/$pathsuffix"
-          pathsuffix=${pathsuffix%/}
-          # Strip off the last hyphen and what follows
-          dateprefix=${pathsuffix%-*}
-          # Use the length of what remains to get the hyphen and what follows
-          [ "$dateprefix" != "$pathsuffix" ] && datesuffix="${pathsuffix:${#dateprefix}}"
+  while getopts ":v:p:" optval "$@"  
+    do  
+      case $optval in  
+        "v")  
+          ssversion="$OPTARG"
           ;;
-      *)
-         errormsg="Unknown parameter or option error with option - $OPTARG"
-      ;;
-      esac
+        "p")
+            # Convert any backslashes to forward slashes
+            pathsuffix="${OPTARG//\\//}"
+            # Ensure this is a leading / and no trailing one
+            [ ${pathsuffix:0:1} != "/" ] && pathsuffix="/$pathsuffix"
+            pathsuffix=${pathsuffix%/}
+            # Strip off the last hyphen and what follows
+            dateprefix=${pathsuffix%-*}
+            # Use the length of what remains to get the hyphen and what follows
+            [ "$dateprefix" != "$pathsuffix" ] && datesuffix="${pathsuffix:${#dateprefix}}"
+            ;;
+        *)
+           errormsg="Unknown parameter or option error with option - $OPTARG"
+        ;;
+        esac
   done
  `｀｀
 
