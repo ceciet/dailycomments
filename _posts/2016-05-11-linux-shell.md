@@ -16,12 +16,13 @@ test expr and [expr]
 详情参考：http://www.ibm.com/developerworks/cn/linux/l-bash-test.html
 
 ***
+
 ### 参数：
 详情：http://www.ibm.com/developerworks/cn/linux/l-bash-parameters.html
 
 ### getopts命令
 
-`｀｀
+```
   while getopts ":v:p:" optval "$@"  
     do  
       case $optval in  
@@ -44,7 +45,7 @@ test expr and [expr]
         ;;
         esac
   done
- `｀｀
+```
 
 
 
