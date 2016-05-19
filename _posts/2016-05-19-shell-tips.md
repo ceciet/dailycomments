@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "shell 要点"
-date:   16/5/19 下午4:14
+date:   16/5/19 下午4:14 +0800
 ---
 
 ### shell单引号双引号
